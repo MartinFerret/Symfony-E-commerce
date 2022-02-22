@@ -14,12 +14,17 @@
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link mr-4" href="#">Home
+						<a class="nav-link mr-4" href="{{ path ('home') }}">Home
 						</a>
 					</li>
 				{% if app.user != null %}
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="{{ path ('account') }}">My Account
+						</a>
+					</li>
 					<a class="btn btn-danger" href="{{ path ('app_logout') }}">Log out</a>
 				{% else %}
+
 					<a href="{{ path ('app_login') }}" class="btn btn-success mr-4">Log in</a>
 					<a href="{{ path ('signup') }}" class="btn btn-success">Sign up</a>
 				{% endif %}
