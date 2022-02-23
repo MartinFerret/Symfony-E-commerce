@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+{% for message in app.flashes('success') %}
+	<div class="alert alert-success">
+			{{ message }}
+	</div>
+{% endfor %}
+
+	<h1>My account
+	</h1>
+
+	<p>Welcome in your account
+		{{ app.user.firstname }},</p>
+	<p>that is the spot where you can handle your personnal informations.</p>
+
+	<hr>
+	<ul>
+		<li><a href="{{ path ('account_password') }}">Change my password</a></li>
+		<li><a href="#">Add a new address</a></li>
+		<li><a href="#">My orders</a></li>
+	</ul>
+    <hr>
+
+
+{% endblock %}
