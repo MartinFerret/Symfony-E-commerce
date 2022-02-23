@@ -4,6 +4,12 @@
 
 {% block content %}
 
+{% for message in app.flashes('success') %}
+	<div class="alert alert-success">
+			{{ message }}
+	</div>
+{% endfor %}
+
 	<h1>My account
 	</h1>
 
@@ -13,7 +19,7 @@
 
 	<hr>
 	<ul>
-		<li><a href="#">Change my password</a></li>
+		<li><a href="{{ path ('account_password') }}">Change my password</a></li>
 		<li><a href="#">Add a new address</a></li>
 		<li><a href="#">My orders</a></li>
 	</ul>
