@@ -7,7 +7,8 @@
 		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 		<meta name="generator" content="Jekyll v4.1.1">
 		{% block title %}Blogify{% endblock %}
-		<!-- Bootstrap core CSS --> <link href="{{ asset('/assets/css/carousel.css') }}" rel="stylesheet"> <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet"> <style> .bd-placeholder-img { font-size: 1.125rem; text-anchor: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } @media(min-width: 768px) { .bd-placeholder-img-lg { font-size: 3.5rem; } } </style> <!-- Custom styles for this template --> <link href="carousel.css" rel="stylesheet"> </head> <body> <header> <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> <a class="navbar-brand" href="#">Blogify</a>
+		<!-- Bootstrap core CSS --> <link href="{{ asset('/assets/css/carousel.css') }}" rel="stylesheet"> <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet"> <style> .bd-placeholder-img { font-size: 1.125rem; text-anchor: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } @media(min-width: 768px) { .bd-placeholder-img-lg { font-size: 3.5rem; } } </style> <!-- Custom styles for this template --> <link href="carousel.css" rel="stylesheet"> 
+		<link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}"></head> <body> <header> <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> <a class="navbar-brand" href="#">Blogify</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -17,9 +18,21 @@
 						<a class="nav-link mr-4" href="{{ path ('home') }}">Home
 						</a>
 					</li>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="#">Our products
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="#">Who are we ?
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="#">Contact
+						</a>
+					</li>
 				{% if app.user != null %}
 					<li class="nav-item active">
-						<a class="nav-link mr-4" href="{{ path ('account') }}">My Account
+						<a class="nav-link mr-4" href="{{ path ('account') }}">My Account ({{ app.user.firstname }})
 						</a>
 					</li>
 					<a class="btn btn-danger" href="{{ path ('app_logout') }}">Log out</a>
@@ -108,11 +121,9 @@
 	<!-- /.container -->
 
 	<!-- FOOTER -->
-	<footer class="container">
-		<p class="float-right">
-			<a href="#">Back to top</a>
-		</p>
-		<p>&copy; 2017-2020 Company, Inc. &middot;
+	<footer class="footer-custom">
+		<p>&copy; 2017-2022 Blogify &middot; <br>
+		<small>The shop 100% ethic</small> <br>
 			<a href="#">Privacy</a>
 			&middot;
 			<a href="#">Terms</a>
