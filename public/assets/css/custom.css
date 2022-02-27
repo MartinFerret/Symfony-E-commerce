@@ -1,5 +1,15 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
 .footer-custom {
-    position: fixed;
+    position: absolute;
     text-align: center;
     bottom: 0;
     width: 100%;

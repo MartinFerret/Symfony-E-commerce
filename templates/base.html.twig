@@ -35,15 +35,24 @@
 						<a class="nav-link mr-4" href="{{ path ('account') }}">My Account ({{ app.user.firstname }})
 						</a>
 					</li>
-					<a class="btn btn-danger" href="{{ path ('app_logout') }}">Log out</a>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="{{ path('app_logout') }}">Log out
+						</a>
+					</li>
 				{% else %}
 
-					<a href="{{ path ('app_login') }}" class="btn btn-success mr-4">Log in</a>
-					<a href="{{ path ('signup') }}" class="btn btn-success">Sign up</a>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="{{ path('app_login') }}">Log in
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link mr-4" href="{{ path('signup') }}">Sign up
+						</a>
+					</li>
 				{% endif %}
 				</ul>
-				<form class="form-inline mt-2 mt-md-0">
-					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+				<form class="form-inline mt-2 mt-md-0" method="POST" action="{{ path ('search') }}">
+					<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
