@@ -6,3 +6,28 @@
     background-color: #dfeaff;
     padding: 25px;
 }
+
+.product-container {
+    margin-bottom: 200px;
+}
+
+.product-item h5 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+}
+
+.product-item .product-subtitle {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-item .product-price {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-single-price {
+    font-size: 19px;
+}
