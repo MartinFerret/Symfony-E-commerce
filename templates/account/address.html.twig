@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<a href="{{ path('address_add') }}" class="btn btn-info-sm float-right">Add an adress</a>
+
+<h1>My addresses</h1><br>
+<small>Here you can handle all your addresses</small>
+
+<a href="{{ path ('account') }}">Back</a>
+<hr>
+
+{% if app.user.addresses|length == 0 %}
+    <p class="text-center">You did not have added an address yet. If you do want to add one, <a href="{{ path('address_add') }}">click here.</a></p>
+    {% else %}
+        {{app.user.addresses }}
+{% endif %}
+
+
+{% endblock %}

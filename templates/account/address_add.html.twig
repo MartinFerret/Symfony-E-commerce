@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<a href="#" class="btn btn-info-sm float-right">Add an adress</a>
+
+<a href="{{ path ('account') }}">Back</a>
+<hr>
+
+{{ form(form) }}
+
+
+{% endblock %}

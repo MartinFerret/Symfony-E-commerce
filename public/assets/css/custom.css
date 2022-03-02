@@ -8,14 +8,7 @@ body {
     position: relative;
 }
 
-.footer-custom {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    background-color: #dfeaff;
-    padding: 25px;
-}
+
 
 .product-container {
     margin-bottom: 200px;
