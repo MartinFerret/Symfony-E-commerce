@@ -12,11 +12,20 @@
 <a href="{{ path ('account') }}">Back</a>
 <hr>
 
-{% if app.user.addresses|length == 0 %}
-    <p class="text-center">You did not have added an address yet. If you do want to add one, <a href="{{ path('address_add') }}">click here.</a></p>
+<div class="row">
+    {% for address in app.user.addresses %}
+        <div class="card mr-3" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ address.name }}</h5>
+                <p class="card-text"{{ address.address }}, {{ address.zipcode }}/{{ address.city }}</p>
+                <p>{{ address.country }}</p>
+                <a href="{{ path('address_edit', { 'id' : address.id}) }}">Amend</a> | <a href="{{ path('address_delete', { 'id' : address.id}) }}">Delete</a>
+            </div>
+        </div>
     {% else %}
-        {{app.user.addresses }}
-{% endif %}
-
+        You haven't had any address right now, please do by <a href="{{ path('address_add') }}">clicking here</a> 
+    {% endfor %}
+</div>
 
 {% endblock %}
