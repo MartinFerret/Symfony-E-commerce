@@ -56,7 +56,7 @@ Find all products added to your cart
 <div class="text-right mb-5">
     <b>Number of products :</b> {{ cart|length }} <br>
     <b>Total amount :</b> {{ (total / 100)|number_format(2, ',', '.') }} euros. 
-    <a href="#" class="btn btn-success btn-block mt-3">Validate my basket</a>
+    <a href="{{ path('order') }}" class="btn btn-success btn-block mt-3">Validate my basket</a>
 </div>
 
 {% else %}
